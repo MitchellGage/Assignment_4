@@ -1,0 +1,123 @@
+.app {
+  align-items: center;
+  height: 100%;
+  width: 450px;
+  flex-direction: column;
+  background-color: aliceblue;
+  overflow-y: auto;
+  border-radius: 6px;
+  margin: 0 auto;
+  border: 1px solid lightsteelblue;
+}
+#tasks {
+  display: flex;
+  flex-direction: column;
+  grid-template-columns: 1fr;
+  gap: 10px;
+  width: 400px;
+  overflow-y: auto;
+  margin-left: 25px;
+}
+#tasks div {
+  border-radius: 6px;
+  padding: 5px;
+  display: grid;
+  gap: 4px;
+}
+body {
+  padding-top: 1rem;
+  padding-bottom: 1rem;
+  margin: 0;
+}
+h1 {
+  text-align: center;
+  margin: 1rem 0;
+  text-size-adjust: 100;
+}
+button {
+  padding: 0.5rem 1rem;
+  font-size: 1rem;
+  cursor: pointer;
+  background-color: lightsteelblue;
+  border-radius: 4px;
+  border: 1px solid teal;
+}
+.modal {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5);
+  justify-content: right;
+  align-items: right;
+}
+.modal.show {
+  display: flex;
+}
+.modal-dialog {
+  max-width: 500px;
+  max-height: 350px;
+  margin: 1.7rem auto;
+  padding: 1rem;
+  background: azure;
+  border-radius: 0.3rem;
+}
+.form-control {
+  width: 100%;
+  padding: 0.5rem;
+  margin-bottom: 1rem;
+  border: 1px solid darkslateblue;
+  border-radius: 0.3rem;
+}
+.modal .btn-secondary {
+  background-color: coral;
+  color: white;
+  border: none;
+  margin-right: 0.5rem;
+}
+.modal .btn-primary {
+  background-color: cornflowerblue;
+  color: white;
+  border: none;
+}
+.modal .btn {
+  padding: 0.5rem 1rem;
+  border-radius: 0.3rem;
+  cursor: pointer;
+}
+.auth-modal {
+  position: fixed;
+  z-index: 1000;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0,0,0,0.5);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.auth-modal-content {
+  background: #fff;
+  padding: 2rem;
+  border-radius: 8px;
+  width: 90%;
+  max-width: 350px;
+  text-align: center;
+}
+.auth-modal-content input {
+  width: 90%;
+  padding: 0.5rem;
+  margin: 0.5rem 0;
+}
+.auth-modal-content button {
+  margin-top: 1rem;
+  padding: 0.5rem 1rem;
+}
+.error-msg {
+  margin-top: 0.5rem;
+  font-size: 0.9rem;
+  color: red;
+}
