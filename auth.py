@@ -7,9 +7,9 @@ from pydantic_settings import BaseSettings, SettingsConfigDict
 
 class MyConfig(BaseSettings):
     connection_string: str = (
-        "mongodb+srv://mitchellrgage:bh4c93pzi76@cluster0.4fzlw.mongodb.net/?retryWrites=true&w=majority"
-    )
-    secret_key: str = "bh4c93pzi76"
+        "mongodb+srv://mitchellrgage:PASSWORD@cluster0.4fzlw.mongodb.net/?retryWrites=true&w=majority"
+    )        #Edit the username, password, and cluster name^
+    secret_key: str = "PASSWORD"
 
     model_config = SettingsConfigDict(env_file="../.env")
 
