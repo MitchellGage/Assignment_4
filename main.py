@@ -14,9 +14,9 @@ app = FastAPI()
 @app.on_event("startup")
 async def app_init():
     client = AsyncIOMotorClient(
-        "mongodb+srv://mitchellrgage:bh4c93pzi76@cluster0.4fzlw.mongodb.net/?retryWrites=true&w=majority"
-    )
-    database_name = "task_db"
+        "mongodb+srv://mitchellrgage:PASSWORD@cluster0.4fzlw.mongodb.net/?retryWrites=true&w=majority"
+    )        #Edit the username, password, and cluster name^
+    database_name = "DATABASE"
     await init_beanie(
         database=client[database_name],
         document_models=[User],
